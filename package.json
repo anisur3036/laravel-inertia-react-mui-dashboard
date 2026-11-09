@@ -11,19 +11,19 @@
         "types:check": "tsc --noEmit"
     },
     "dependencies": {
+        "@emotion/react": "^11.14.0",
+        "@emotion/styled": "^11.14.1",
         "@inertiajs/react": "^3.0.0",
         "@inertiajs/vite": "^3.0.0",
-        "@tailwindcss/vite": "^4.1.11",
+        "@mui/icons-material": "^9.5.0",
+        "@mui/material": "^9.5.0",
         "@types/react": "^19.2.0",
         "@types/react-dom": "^19.2.0",
         "@vitejs/plugin-react": "^6.1.1",
-        "clsx": "^2.1.1",
         "concurrently": "^10.0.3",
         "laravel-vite-plugin": "^3.1",
         "react": "^19.2.0",
         "react-dom": "^19.2.0",
-        "tailwind-merge": "^3.0.1",
-        "tailwindcss": "^4.0.0",
         "typescript": "^5.7.2",
         "vite": "npm:@voidzero-dev/vite-plus-core@1.4.0"
     },
@@ -37,7 +37,6 @@
     "optionalDependencies": {
         "@laravel/multiplex": "^0.4.1",
         "@rollup/rollup-linux-x64-gnu": "4.9.5",
-        "@tailwindcss/oxide-linux-x64-gnu": "^4.0.1",
         "lightningcss-linux-x64-gnu": "^1.29.1"
     },
     "overrides": {

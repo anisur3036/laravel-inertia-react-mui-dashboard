@@ -8,6 +8,23 @@
         <link rel="icon" href="/favicon.svg" type="image/svg+xml">
         <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
+        {{-- Apply the persisted theme before first paint to avoid a light/dark flash. --}}
+        <script>
+            (function () {
+                try {
+                    var mode = localStorage.getItem('theme-mode');
+                    var isDark = mode === 'dark' || ((mode === null || mode === 'system') && window.matchMedia('(prefers-color-scheme: dark)').matches);
+                    document.documentElement.classList.toggle('dark', isDark);
+                    document.documentElement.style.colorScheme = isDark ? 'dark' : 'light';
+                } catch (e) {}
+            })();
+        </script>
+
+        <style>
+            html { background-color: #f5f6fa; }
+            html.dark { background-color: #0b0f1a; }
+        </style>
+
         @fonts
 
         @viteReactRefresh
